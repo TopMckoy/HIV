@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Donate Now</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0; /* Adjust as needed */
+        }
+        header {
+            width: 100%;
+            background-color: #d84646;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            width: 100%;
+        }
+        form {
+            padding: 20px;
+            background-color: #d84646;
+            border-radius: 8px;
+            text-align: center;
+        }
+        label {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Donate Now</h1>
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+    </header>
+    <main>
+        <form action="https://www.paypal.com/donate" method="post">
+            <!-- Identify your business so that you can collect the payments. -->
+            <input type="hidden" name="business" value="donations@kcparkfriends.org">
+            <!-- Specify details about the contribution -->
+            <input type="hidden" name="no_recurring" value="0">
+            <input type="hidden" name="item_name" value="Friends of the Park">
+            <input type="hidden" name="item_number" value="Fall Cleanup Campaign">
+            <!-- Donation amount options -->
+            <label for="amount">Select an amount:</label><br>
+            <input type="radio" id="amount25" name="amount" value="25.00">
+            <label for="amount25">$25</label><br>
+            <input type="radio" id="amount50" name="amount" value="50.00">
+            <label for="amount50">$50</label><br>
+            <input type="radio" id="amount100" name="amount" value="100.00">
+            <label for="amount100">$100</label><br>
+            <!-- Other necessary fields -->
+            <input type="hidden" name="currency_code" value="USD">
+            <!-- Display the payment button -->
+            <input type="image" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" alt="Donate">
+            <img alt="" width="1" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+        </form>
+    </main>
+</body>
+</html>
